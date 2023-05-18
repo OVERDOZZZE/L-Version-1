@@ -1,7 +1,5 @@
 # L-Version-1
 
-# GoCardless sample application
-
 ## Setup
 
 The first thing to do is to clone the repository:
