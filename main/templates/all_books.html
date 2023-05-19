@@ -49,6 +49,28 @@
             display: block;
             margin-bottom: 5px;
         }
+        .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .step-links {
+        display: inline-block;
+    }
+
+    .step-links a {
+        color: #000;
+        text-decoration: none;
+        padding: 8px 16px;
+        border: 1px solid #ddd;
+        margin-right: 5px;
+    }
+
+    .step-links a:hover {
+        background-color: #ddd;
+    }
+
     </style>
 </head>
 <body>
@@ -64,5 +86,17 @@
         </div>
         {% endfor %}
     </div>
+        <div class="pagination">
+
+            <span class="step-links">
+                 {% if books.has_previous %}
+                <a href="?page={{ books.previous_page_number }}"><</a>
+                {% endif %}
+
+                {% if books.has_next %}
+                    <a href="?page={{ books.next_page_number }}">></a>
+                {% endif %}
+            </span>
+        </div>
 </body>
 </html>
